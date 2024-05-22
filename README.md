@@ -1,6 +1,6 @@
-# Product Catalog API
+# The Catalog API
 
-- [Product Catalog API](#product-catalog-api)
+- [The Catalog API](#the-catalog-api)
   - [Status](#status)
   - [Descrição do Projeto](#descrição-do-projeto)
   - [Tecnologias Utilizadas](#tecnologias-utilizadas)
