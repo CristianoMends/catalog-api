@@ -43,7 +43,7 @@ Esta API permite que você gerencie um catálogo de produtos, incluindo a criaç
 <div align="center">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original-wordmark.svg" width="100px"/>
 
-[`https://thecatalogapi.vercel.app//`](https://thecatalogapi.vercel.app/)
+[`https://catalogapi.vercel.app`](https://catalogapi.vercel.app/)
 
 </div>          
           
