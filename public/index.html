@@ -1,65 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Catalog API</title>
+    <meta name="description" content="The Catalog API - Acesse a documentação para entender as funções do endpoint">
+    <meta name="keywords" content="API, Catalog, Documentation">
+    <link rel="icon" href="api.ico" type="image/x-icon">
+
+    <title>The Catalog API</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1a202c;
-            color: #cbd5e0;
+            color: #62686e;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             overflow: hidden;
+            background-color: aliceblue;
         }
 
         .container {
-            text-align: center;
-            background: #2d3748;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            width: 90%;
-            max-width: 600px;
-        }
-
-        h1 {
-            color: #63b3ed;
-            margin-bottom: 10px;
-        }
-
-        p {
-            color: #e2e8f0;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .api-link {
-            color: #90cdf4;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
+            margin: 5px;
             border: 1px solid;
-            padding: 5px;
             border-radius: 5px;
-            border-color: rgba(173, 173, 173, 0.414);
+            padding: 10px;
+            box-shadow: 2px 2px 5px #000;
         }
 
-        .api-link:hover {
-            color: white;
-            background-color: #1a202c;
+        a {
+            border: 1px solid;
+            border-radius: 5px;
+            padding: 5px;
+            box-shadow: 1px 1px 3px #000;
+        }
+
+        .tools img {
+            width: 50px;
+        }
+
+        .tools img:nth-child(1) {
+            animation: turn 5s linear;
+            animation-delay: 0s;
+        }
+
+        .tools img:nth-child(2) {
+            animation: turn 5s linear;
+            animation-delay: 5s;
+        }
+
+        .tools img:nth-child(3) {
+            animation: turn 5s linear;
+            animation-delay: 10s;
+        }
+
+        .tools img:nth-child(4) {
+            animation: turn 5s linear forwards;
+            animation-delay: 15s;
+        }
+
+        @keyframes turn {
+            from {}
+
+            to {
+                transform: rotateY(360deg);
+            }
         }
     </style>
 </head>
+
 <body>
+    <section class="tools">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg" />
+
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" />
+
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
+
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" />
+
+    </section>
+
     <div class="container">
-        <h1>API de Catálogo de Produtos</h1>
-        <a class="api-link" href="https://github.com/CristianoMends/product-catalog-api" target="_blank">Documentação</a>
+        <h1>The Catalog API</h1>
+        <p>API working successfully, access the documentation to understand the endpoint functions</p>
+        <a class="api-link" href="https://github.com/CristianoMends/catalog-api" target="_blank">Documentation</a>
     </div>
 </body>
+
 </html>
