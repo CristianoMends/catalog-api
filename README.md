@@ -1,6 +1,6 @@
-# Product Catalog API
+# The Catalog API
 
-- [Product Catalog API](#product-catalog-api)
+- [The Catalog API](#the-catalog-api)
   - [Status](#status)
   - [Descrição do Projeto](#descrição-do-projeto)
   - [Tecnologias Utilizadas](#tecnologias-utilizadas)
@@ -43,7 +43,7 @@ Esta API permite que você gerencie um catálogo de produtos, incluindo a criaç
 <div align="center">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original-wordmark.svg" width="100px"/>
 
-[`https://product-catalog-api-woad.vercel.app/`](https://product-catalog-api-woad.vercel.app/)
+[`https://thecatalogapi.vercel.app//`](https://thecatalogapi.vercel.app/)
 
 </div>          
           
