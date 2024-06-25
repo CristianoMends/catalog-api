@@ -3,4 +3,5 @@
 export class PreviewCatalog {
     link:string;
     name: string;
+    productImages: string[];
 }

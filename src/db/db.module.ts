@@ -10,7 +10,7 @@ import { UserEntity } from '../users/entities/user.entity';
         TypeOrmModule.forRoot({
             type: 'postgres',
             url: process.env.DATABASE_URL,
-            ssl: { rejectUnauthorized: false }, //remover linha para uso com banco de dados local
+            //ssl: { rejectUnauthorized: false }, //remover linha para uso com banco de dados local
             entities: [ ProductEntity, UserEntity],
             synchronize: false,
             autoLoadEntities: true

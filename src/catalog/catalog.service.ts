@@ -20,10 +20,14 @@ export class CatalogService {
   findByProductId(product_id: number) {
     return this.userService.findUserByProductId(product_id);
   }
-  async findAllCatalogs() {
-    const previews = this.userService.findAll();
-    return (await previews).map(p => this.toCatalogView(p));
+  async findAllCatalogs(): Promise<PreviewCatalog[]> {
+    const users = await this.userService.findAll(); // Espera a lista de usuários
+    const previews = await Promise.all(users.map(async (user) => {
+      return await this.toCatalogView(user); // Espera cada toCatalogView
+    }));
+    return previews;
   }
+  
   async findAllProducts(params: FindParams, name: string) {
     const products: Promise<ProductEntity[]> = this.productService.findAll(params, name)
     return (await products).map(product => this.toProductView(product));
@@ -40,11 +44,13 @@ export class CatalogService {
       image: product.image,
     };
   }
-  private toCatalogView(user:UserEntity):PreviewCatalog{
+  private async toCatalogView(user: UserEntity): Promise<PreviewCatalog> {
+    const images = await this.productService.findByUser(user.id); // Espera as imagens serem retornadas
     return {
-      link : `catalog/${user.fullName.replace(' ','_').toLowerCase()}`,
-      name : user.fullName
-    }
-
+      link: `catalog/${user.fullName.replace(' ', '_').toLowerCase()}`,
+      name: user.fullName,
+      productImages: images
+    };
   }
+  
 }

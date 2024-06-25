@@ -1,4 +1,6 @@
 /* eslint-disable prettier/prettier */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable prettier/prettier */
 import { Controller, Get, Param, Query } from '@nestjs/common';
 import { CatalogService } from './catalog.service';
 import { FindParams } from '../product/dto/create-product.dto';
@@ -24,7 +26,7 @@ export class CatalogController {
   }
 
   @Get()
-  getAllPreview(): Promise<PreviewCatalog[]>{
+  getAllPreview():Promise<PreviewCatalog[]>{
     return this.catalogService.findAllCatalogs();
   }
 

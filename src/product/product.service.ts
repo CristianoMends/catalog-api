@@ -64,6 +64,17 @@ export class ProductService {
     }
   }
 
+  findByUser(id:string):Promise<string[]>{
+    const images = this.productRepository.query(`
+      select product.image from product
+      inner join users
+      on product."userId" = users.id
+      where users.id = uuid'${id}'
+      limit 3
+      `);
+      return images;
+  }
+
   async findAll(params: FindParams, name: string): Promise<ProductEntity[]> {
     const productQuery = `
     SELECT p.* FROM product p
