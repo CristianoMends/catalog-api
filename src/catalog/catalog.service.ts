@@ -47,7 +47,7 @@ export class CatalogService {
   private async toCatalogView(user: UserEntity): Promise<PreviewCatalog> {
     const images = await this.productService.findByUser(user.id); // Espera as imagens serem retornadas
     return {
-      link: `catalog/${user.fullName.replace(' ', '_').toLowerCase()}`,
+      link: `catalog/${user.fullName.replace(/ /g, '_').toLowerCase()}`,
       name: user.fullName,
       productImages: images
     };
